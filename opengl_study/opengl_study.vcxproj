@@ -77,6 +77,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -124,6 +125,23 @@
   <ItemGroup>
     <ClCompile Include="external\glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="tools\GLShaderProgram.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h" />
+    <ClInclude Include="exercises\1_hello_triangle_exercise1.h" />
+    <ClInclude Include="exercises\2_hello_triangle_exercise2.h" />
+    <ClInclude Include="exercises\3_shader_exercise1.h" />
+    <ClInclude Include="exercises\4_shader_exercise2.h" />
+    <ClInclude Include="exercises\5_shader_exercise3.h" />
+    <ClInclude Include="exercises\exercises.h" />
+    <ClInclude Include="tools\GLShaderProgram.h" />
+    <ClInclude Include="tutorials\1_hello_window.h" />
+    <ClInclude Include="tutorials\2_hello_triangle.h" />
+    <ClInclude Include="tutorials\3_hello_rectangle.h" />
+    <ClInclude Include="tutorials\4_shader_uniform.h" />
+    <ClInclude Include="tutorials\5_shader_interpolation.h" />
+    <ClInclude Include="tutorials\tutorials.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -16,6 +16,15 @@
     <Filter Include="源文件\external">
       <UniqueIdentifier>{76084608-1888-4f56-ab65-162dbe8506e3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\exercises">
+      <UniqueIdentifier>{b54da3f7-20cf-4329-8b9e-a5c5698873c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\tools">
+      <UniqueIdentifier>{a9709d4f-3c29-42b9-b5d4-a3eba3dbedd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\tutorials">
+      <UniqueIdentifier>{a1c19949-839d-411a-8209-7bbd38580bbf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,5 +33,52 @@
     <ClCompile Include="external\glad.c">
       <Filter>源文件\external</Filter>
     </ClCompile>
+    <ClCompile Include="tools\GLShaderProgram.cpp">
+      <Filter>源文件\tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\1_hello_triangle_exercise1.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\2_hello_triangle_exercise2.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\exercises.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\GLShaderProgram.h">
+      <Filter>源文件\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\1_hello_window.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\tutorials.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\3_hello_rectangle.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\2_hello_triangle.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\4_shader_uniform.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\5_shader_interpolation.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\3_shader_exercise1.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\4_shader_exercise2.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\5_shader_exercise3.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
