@@ -4,3 +4,5 @@
 #include "3_hello_rectangle.h"
 #include "4_shader_uniform.h"
 #include "5_shader_interpolation.h"
+#include "6_texture.h"
+#include "7_texture_combined.h"

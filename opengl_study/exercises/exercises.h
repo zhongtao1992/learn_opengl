@@ -4,3 +4,7 @@
 #include "3_shader_exercise1.h"
 #include "4_shader_exercise2.h"
 #include "5_shader_exercise3.h"
+#include "6_texture_exercise1.h"
+#include "7_texture_exercise2.h"
+#include "8_texture_exercise3.h"
+#include "9_texture_exercise4.h"

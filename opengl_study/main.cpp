@@ -2,6 +2,12 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// combine two texture
+	return tutorial7();
+
+	// load texture
+	return tutorial6();
+
 	// shader interpolation
 	return tutorial5();
 
@@ -19,6 +25,14 @@ int tutorial(){
 }
 
 int exercise(){
+	// use uniform change mix value
+	return exercise9();
+	// show center img
+	return exercise8();
+	// different wrap option
+	return exercise7();
+	// use fragment shader to reverse texture
+	return exercise6();
 	// output the vertex shader value to the fragment shader
 	return exercise5();
 	// move triangle by using uniform value
@@ -36,4 +50,5 @@ int main(){
 	//return tutorial();
 
 	return exercise();
+
 }
