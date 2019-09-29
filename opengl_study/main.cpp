@@ -2,6 +2,9 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// transform
+	return tutorial8();
+
 	// combine two texture
 	return tutorial7();
 
@@ -25,6 +28,10 @@ int tutorial(){
 }
 
 int exercise(){
+	// translate first and then scale
+	return exercise11();
+	// translate first and then rotate
+	return exercise10();
 	// use uniform change mix value
 	return exercise9();
 	// show center img

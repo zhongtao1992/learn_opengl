@@ -36,6 +36,9 @@
     <ClCompile Include="tools\GLShaderProgram.cpp">
       <Filter>源文件\tools</Filter>
     </ClCompile>
+    <ClCompile Include="tools\ImageLoader.cpp">
+      <Filter>源文件\tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
@@ -78,6 +81,39 @@
       <Filter>源文件\exercises</Filter>
     </ClInclude>
     <ClInclude Include="exercises\5_shader_exercise3.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="external\stb_image.h">
+      <Filter>源文件\external</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\ImageLoader.h">
+      <Filter>源文件\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\6_texture.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\7_texture_combined.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\6_texture_exercise1.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\8_texture_exercise3.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\7_texture_exercise2.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\9_texture_exercise4.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\8_transformations.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\10_transform_exercise1.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\11_transform_exercise2.h">
       <Filter>源文件\exercises</Filter>
     </ClInclude>
   </ItemGroup>

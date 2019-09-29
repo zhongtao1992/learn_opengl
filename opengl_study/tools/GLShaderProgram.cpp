@@ -1,5 +1,5 @@
 #include "GLShaderProgram.h"
-#include <glad\glad.h>
+
 #include <iostream>
 
 std::string getStringFromFile(const char* filePath){
@@ -106,6 +106,14 @@ int GLShaderProgram::setFloat(const char* name, const float& fValue){
 	int location = getLocation(name);
 	if (location != -1){
 		glUniform1f(location, fValue);
+	}
+	return location;
+}
+
+int GLShaderProgram::setMatrix4fv(const char* name, const GLfloat* pValue){
+	int location = getLocation(name);
+	if (location != -1){
+		glUniformMatrix4fv(location, 1, GL_FALSE, pValue);
 	}
 	return location;
 }
