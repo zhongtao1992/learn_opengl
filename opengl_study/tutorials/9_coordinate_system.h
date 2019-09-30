@@ -2,21 +2,14 @@
 #include "../common.h"
 #include "../tools/ImageLoader.h"
 #include "../tools/GLShaderProgram.h"
-#include <algorithm>
 
-static std::string des11() {
-	return "Try drawing a second container with another call to glDrawElements but place it at a different position using transformations only. Make sure this second container is placed at the top-left of the window and instead of rotating, scale it over time\n";
-}
-
-// transform object
-static int exercise11() {
+// going 3D
+static int tutorial9() {
 	// config opengl
 	GLFWwindow* window = nullptr;
 	if (commonInit(&window) < 0) {
 		return -1;
 	}
-
-	printDes(des11().c_str());
 
 	// vertex data
 	float vertices[] = {
@@ -38,9 +31,11 @@ static int exercise11() {
 		"layout (location = 2) in vec2 aCoord;\n"
 		"out vec3 oColor;\n"
 		"out vec2 oCoord;\n"
-		"uniform mat4 u_transform;"
+		"uniform mat4 u_model;\n"
+		"uniform mat4 u_view;\n"
+		"uniform mat4 u_projection;\n"
 		"void main()\n{"
-		"    gl_Position = u_transform * vec4(aPos, 1.0f);\n"
+		"    gl_Position = u_projection * u_view * u_model * vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
 		"    oColor = aColor;\n"
 		"    oCoord = aCoord;\n"
 		"}\0";
@@ -62,7 +57,6 @@ static int exercise11() {
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
 	glGenBuffers(1, &EBO);
-	// first rectangle
 	// bind
 	glBindVertexArray(VAO);
 	// bind VBO
@@ -92,6 +86,18 @@ static int exercise11() {
 	program.setInt("u_texture", 0);
 	program.setInt("u_texture2", 1);
 
+	// MVP matrix
+	// model matrix: basic transform
+	glm::mat4 model = glm::mat4(1.0f);
+	model = glm::rotate(model, glm::radians(-55.0f), glm::vec3(1.0f, 0.0f, 0.0f));
+	// view matrix: move container backward
+	glm::mat4 view = glm::mat4(1.0f);
+	view = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+	// projection matrix
+	glm::mat4 projection = glm::perspective(glm::radians(45.0f), (float)800 / (float)600, 0.1f, 100.0f);
+	program.setMatrix4fv("u_model", glm::value_ptr(model));
+	program.setMatrix4fv("u_view", glm::value_ptr(view));
+	program.setMatrix4fv("u_projection", glm::value_ptr(projection));
 	// render loop
 	while (!glfwWindowShouldClose(window)) {
 		// handle input event
@@ -106,36 +112,20 @@ static int exercise11() {
 		glBindTexture(GL_TEXTURE_2D, jpgLoader.getID());
 		glActiveTexture(GL_TEXTURE1);
 		glBindTexture(GL_TEXTURE_2D, pngLoader.getID());
-		// draw first rectangle
-		program.use();
-		// translate first then rotate
-		// translate change the basis of the object
-		glm::mat4 trans = glm::mat4(1.0f);
-		trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0, 0, 1.0f));
-		trans = glm::translate(trans, glm::vec3(0.5f, -0.5f, 0.0f));
-		program.setMatrix4fv("u_transform", glm::value_ptr(trans));
-		glBindVertexArray(VAO);
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
-		// draw second rectangle
-		// translate first then scale
-		glm::mat4 trans2 = glm::mat4(1.0f);
-		trans2 = glm::translate(trans2, glm::vec3(-0.5f, 0.5f, 0.0f));
-		float fScale = sin(glfwGetTime());//std::min(0.01, sin(glfwGetTime()));
-		// the fScale is negative then the object will inverts the coordinates of the object
-		trans2 = glm::scale(trans2, glm::vec3(fScale, fScale, fScale));
-		program.setMatrix4fv("u_transform", glm::value_ptr(trans2));
+		// draw triangle
+		program.use();
+		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
-
 	}
 
-	glDeleteVertexArrays(2, &VAO);
-	glDeleteBuffers(2, &VBO);
+	glDeleteVertexArrays(1, &VAO);
+	glDeleteBuffers(1, &VBO);
 	// can't unbind EBO before unbind VAO
-	glDeleteBuffers(2, &EBO);
+	glDeleteBuffers(1, &EBO);
 
 	glfwTerminate();
 	return 0;

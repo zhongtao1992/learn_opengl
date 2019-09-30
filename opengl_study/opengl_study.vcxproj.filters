@@ -116,5 +116,17 @@
     <ClInclude Include="exercises\11_transform_exercise2.h">
       <Filter>源文件\exercises</Filter>
     </ClInclude>
+    <ClInclude Include="tutorials\9_coordinate_system.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\10_coordinate_system_depth.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\11_coordinate_system_multiple.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\12_coordinate_system_exercise1.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

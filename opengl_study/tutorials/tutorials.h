@@ -7,3 +7,6 @@
 #include "6_texture.h"
 #include "7_texture_combined.h"
 #include "8_transformations.h"
+#include "9_coordinate_system.h"
+#include "10_coordinate_system_depth.h"
+#include "11_coordinate_system_multiple.h"

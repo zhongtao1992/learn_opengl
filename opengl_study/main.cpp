@@ -2,6 +2,15 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// 10 3D cubu
+	return tutorial11();
+
+	// 3D cube
+	return tutorial10();
+
+	// going 3D
+	return tutorial9();
+
 	// transform
 	return tutorial8();
 
@@ -28,6 +37,8 @@ int tutorial(){
 }
 
 int exercise(){
+	// multiple 3D cubu
+	return exercise12();
 	// translate first and then scale
 	return exercise11();
 	// translate first and then rotate
