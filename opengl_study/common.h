@@ -7,6 +7,12 @@
 #include <glm\gtc\matrix_transform.hpp>
 #include <glm\gtc\type_ptr.hpp>
 
+#include <vector>
+#include <functional>
+
+static float g_viewWidth = 800.0f;
+static float g_viewHeight = 600.0f;
+
 static inline void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
 	glViewport(0, 0, width, height);
 }
@@ -25,7 +31,7 @@ static inline int commonInit(GLFWwindow** outWin){
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 	// create window
-	GLFWwindow *window = glfwCreateWindow(800, 600, "LearnOpenGL", nullptr, nullptr);
+	GLFWwindow *window = glfwCreateWindow(g_viewWidth, g_viewHeight, "LearnOpenGL", nullptr, nullptr);
 	*outWin = window;
 	if (nullptr == window) {
 		std::cout << "Faild to create GLFW window" << std::endl;
@@ -97,4 +103,70 @@ static inline unsigned int createShaderProgram(const char* vSource, const char* 
 
 static void printDes(const char* des){
 	std::cout << des << std::endl;
+}
+
+// var
+static glm::vec3 g_cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
+static float g_lastX = g_viewWidth * 0.5f;
+static float g_lastY = g_viewHeight * 0.5f;
+static float g_fov = 45.0f;
+// if yaw value is 0.0f, once we first move mouse, the camera will make a large jume to left.
+static float g_yaw = -90.0f; // yaw is initialized to -90.0 degrees since a yaw of 0.0 results in a direction vector pointing to the right so we initially rotate a bit to the left.
+static float g_pitch = 0.0f;
+static bool g_bFirstMouse = true;
+// var
+static std::vector<std::function<void(GLFWwindow* window, double xpos, double ypos)>> g_mouseCallBack;
+static void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
+	if (g_bFirstMouse) {
+		g_bFirstMouse = false;
+		g_lastX = xpos;
+		g_lastY = ypos;
+	}
+	float xoffset = xpos - g_lastX;
+	float yoffset = g_lastY - ypos; // revert
+	g_lastX = xpos;
+	g_lastY = ypos;
+	float sensitivity = 0.08f;
+	xoffset *= sensitivity;
+	yoffset *= sensitivity;
+
+	g_pitch += yoffset;
+	g_yaw += xoffset;
+
+	// constraint
+	if (g_pitch > 89.0f) {
+		g_pitch = 89.0f;
+	}
+	if (g_pitch < -89.0f) {
+		g_pitch = -89.0f;
+	}
+	float _pitch = glm::radians(g_pitch);
+	float _yaw = glm::radians(g_yaw);
+	// calcute direction
+	glm::vec3 front;
+	front.x = cos(_yaw) * cos(_pitch);
+	front.y = sin(_pitch);
+	front.z = sin(_yaw) * cos(_pitch);
+	g_cameraFront = glm::normalize(front);
+
+	for (auto v : g_mouseCallBack){
+		v(window, xpos, ypos);
+	}
+}
+
+static std::vector<std::function<void(GLFWwindow* window, double xpos, double ypos)>> g_scrollCallBack;
+static void scroll_callback(GLFWwindow* window, double xoffset, double yoffset) {
+	if (g_fov >= 1.0f && g_fov <= 45.0f) {
+		g_fov -= yoffset;
+	}
+	if (g_fov <= 1.0f) {
+		g_fov = 1.0f;
+	}
+	if (g_fov >= 45.0f) {
+		g_fov = 45.0f;
+	}
+
+	for (auto v : g_scrollCallBack) {
+		v(window, xoffset, yoffset);
+	}
 }

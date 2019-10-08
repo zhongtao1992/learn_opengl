@@ -10,3 +10,6 @@
 #include "9_coordinate_system.h"
 #include "10_coordinate_system_depth.h"
 #include "11_coordinate_system_multiple.h"
+#include "12_camera_circle.h"
+#include "13_camera_keyboard_dt.h"
+#include "14_camera_mouse_zoom.h"

@@ -2,6 +2,15 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// use mouse to controll camera view
+	return tutorial14();
+
+	// handle keyboard event to move camera
+	return tutorial13();
+
+	// camera circle
+	return tutorial12();
+
 	// 10 3D cubu
 	return tutorial11();
 
@@ -37,6 +46,10 @@ int tutorial(){
 }
 
 int exercise(){
+	// camera
+	return exercise14();
+	// camera 
+	return exercise13();
 	// multiple 3D cubu
 	return exercise12();
 	// translate first and then scale

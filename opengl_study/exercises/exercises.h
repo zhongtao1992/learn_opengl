@@ -11,3 +11,5 @@
 #include "10_transform_exercise1.h"
 #include "11_transform_exercise2.h"
 #include "12_coordinate_system_exercise1.h"
+#include "13_camera_exercise1.h"
+#include "14_camera_exercise2.h"
