@@ -14,3 +14,5 @@
 #include "13_camera_keyboard_dt.h"
 #include "14_camera_mouse_zoom.h"
 #include "15_colors.h"
+#include "16_basic_lighting_diffuse.h"
+#include "17_basic_lighting_specular.h"

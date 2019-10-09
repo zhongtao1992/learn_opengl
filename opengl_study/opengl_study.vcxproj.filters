@@ -152,5 +152,17 @@
     <ClInclude Include="tutorials\15_colors.h">
       <Filter>源文件\tutorials</Filter>
     </ClInclude>
+    <ClInclude Include="tutorials\16_basic_lighting_diffuse.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\17_basic_lighting_specular.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\15_basic_lighting_exercise1.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\16_basic_lighting_exercise2.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

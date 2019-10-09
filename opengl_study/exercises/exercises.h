@@ -13,3 +13,5 @@
 #include "12_coordinate_system_exercise1.h"
 #include "13_camera_exercise1.h"
 #include "14_camera_exercise2.h"
+#include "15_basic_lighting_exercise1.h"
+#include "16_basic_lighting_exercise2.h"

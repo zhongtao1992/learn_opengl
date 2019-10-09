@@ -2,6 +2,12 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// lighting: phong lighting model
+	return tutorial17();
+
+	// lighting
+	return tutorial16();
+
 	// colors
 	return tutorial15();
 
@@ -49,6 +55,10 @@ int tutorial(){
 }
 
 int exercise(){
+	// phong lighting model in view space
+	return exercise16();
+	// lighting 
+	return exercise15();
 	// camera
 	return exercise14();
 	// camera 
@@ -81,7 +91,7 @@ int exercise(){
 
 int main(){
 	
-	return tutorial();
+	//return tutorial();
 
 	return exercise();
 
