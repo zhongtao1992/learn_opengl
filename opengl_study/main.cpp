@@ -2,6 +2,9 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// colors
+	return tutorial15();
+
 	// use mouse to controll camera view
 	return tutorial14();
 
@@ -78,7 +81,7 @@ int exercise(){
 
 int main(){
 	
-	//return tutorial();
+	return tutorial();
 
 	return exercise();
 

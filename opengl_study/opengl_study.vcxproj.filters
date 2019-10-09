@@ -39,6 +39,9 @@
     <ClCompile Include="tools\ImageLoader.cpp">
       <Filter>源文件\tools</Filter>
     </ClCompile>
+    <ClCompile Include="tools\Camera.cpp">
+      <Filter>源文件\tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
@@ -127,6 +130,27 @@
     </ClInclude>
     <ClInclude Include="exercises\12_coordinate_system_exercise1.h">
       <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\12_camera_circle.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\13_camera_keyboard_dt.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\14_camera_mouse_zoom.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\Camera.h">
+      <Filter>源文件\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\13_camera_exercise1.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\14_camera_exercise2.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\15_colors.h">
+      <Filter>源文件\tutorials</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

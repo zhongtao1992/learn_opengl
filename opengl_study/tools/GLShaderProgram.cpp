@@ -117,3 +117,11 @@ int GLShaderProgram::setMatrix4fv(const char* name, const GLfloat* pValue){
 	}
 	return location;
 }
+
+int GLShaderProgram::setVec3(const char* name, const float& x, const float& y, const float& z){
+	int location = getLocation(name);
+	if (location != -1) {
+		glUniform3f(location, x, y, z);
+	}
+	return location;
+}

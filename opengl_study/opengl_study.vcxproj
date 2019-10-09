@@ -125,6 +125,7 @@
   <ItemGroup>
     <ClCompile Include="external\glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="tools\Camera.cpp" />
     <ClCompile Include="tools\GLShaderProgram.cpp" />
     <ClCompile Include="tools\ImageLoader.cpp" />
   </ItemGroup>
@@ -133,6 +134,8 @@
     <ClInclude Include="exercises\10_transform_exercise1.h" />
     <ClInclude Include="exercises\11_transform_exercise2.h" />
     <ClInclude Include="exercises\12_coordinate_system_exercise1.h" />
+    <ClInclude Include="exercises\13_camera_exercise1.h" />
+    <ClInclude Include="exercises\14_camera_exercise2.h" />
     <ClInclude Include="exercises\1_hello_triangle_exercise1.h" />
     <ClInclude Include="exercises\2_hello_triangle_exercise2.h" />
     <ClInclude Include="exercises\3_shader_exercise1.h" />
@@ -144,10 +147,15 @@
     <ClInclude Include="exercises\9_texture_exercise4.h" />
     <ClInclude Include="exercises\exercises.h" />
     <ClInclude Include="external\stb_image.h" />
+    <ClInclude Include="tools\Camera.h" />
     <ClInclude Include="tools\GLShaderProgram.h" />
     <ClInclude Include="tools\ImageLoader.h" />
     <ClInclude Include="tutorials\10_coordinate_system_depth.h" />
     <ClInclude Include="tutorials\11_coordinate_system_multiple.h" />
+    <ClInclude Include="tutorials\12_camera_circle.h" />
+    <ClInclude Include="tutorials\13_camera_keyboard_dt.h" />
+    <ClInclude Include="tutorials\14_camera_mouse_zoom.h" />
+    <ClInclude Include="tutorials\15_colors.h" />
     <ClInclude Include="tutorials\1_hello_window.h" />
     <ClInclude Include="tutorials\2_hello_triangle.h" />
     <ClInclude Include="tutorials\3_hello_rectangle.h" />
