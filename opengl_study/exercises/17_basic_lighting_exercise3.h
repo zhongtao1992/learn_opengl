@@ -4,19 +4,19 @@
 #include "../tools/GLShaderProgram.h"
 #include "../tools/Camera.h"
 
-static std::string des16() {
-	return "Do Phong shading in view space instead of world space\n";
+static std::string des17() {
+	return "Implement Gouraud shading\n";
 }
 
 // lighting
-static int exercise16() {
+static int exercise17() {
 	// config opengl
 	GLFWwindow* window = nullptr;
 	if (commonInit(&window) < 0) {
 		return -1;
 	}
 
-	printDes(des16().c_str());
+	printDes(des17().c_str());
 
 	Camera mCamera = Camera(glm::vec3(0.0f, 0.0f, 6.0f), glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 	// hide cursor
@@ -101,46 +101,48 @@ static int exercise16() {
 	const char* objectVertexShaderSource = "#version 330 core\n"
 		"layout (location = 0) in vec3 aPos;\n"
 		"layout (location = 1) in vec3 aNormal;\n"
-		"out vec3 oNormal;\n"
-		"out vec3 oFragPos;\n"
-		"out vec3 oLightPos;\n"
+
+		"out vec3 oLightingColor;\n"
+
 		"uniform mat4 u_model;\n"
 		"uniform mat4 u_view;\n"
 		"uniform mat4 u_projection;\n"
+
+		"uniform vec3 u_lightColor;\n"
 		"uniform vec3 u_lightPos;\n"
+		"uniform vec3 u_viewPos;\n"
 
 		"void main()\n{"
 		"    gl_Position = u_projection * u_view * u_model * vec4(aPos, 1.0);\n"
-		"    oNormal = mat3(transpose(inverse(u_view * u_model))) * aNormal;\n  // transform to view space coordinate"
-		"    oFragPos = vec3(u_view * u_model * vec4(aPos, 1.0f));\n  // transform to view space coordinate"
-		"    oLightPos = vec3(u_view * vec4(u_lightPos, 1.0f));\n // transform world space to view space coordinate"
-		"}\0";
-	const char* objectFragmentShaderSource = "#version 330 core\n"
-		"out vec4 FragColor;\n"
-		"in vec3 oNormal;\n"
-		"in vec3 oFragPos;\n"
-		"in vec3 oLightPos;\n"
+		"    vec3 normal = aNormal;\n"
+		"    vec3 fragPos = vec3(u_model * vec4(aPos, 1.0f));\n  // transform to world space coordinate"
 
-		"uniform vec3 u_objectColor;\n"
-		"uniform vec3 u_lightColor;\n"
-		"uniform vec3 u_viewPos;\n"
-		"void main(){\n"
+		"    // gouraud shading \n"
+
 		"    float ambientStrength = 0.1f;\n"
 		"    vec3 ambient = ambientStrength * u_lightColor;\n"
 
-		"    vec3 norm = normalize(oNormal);\n"
-		"    vec3 lightDir = normalize(oLightPos - oFragPos);\n"
+		"    vec3 norm = normalize(normal);\n"
+		"    vec3 lightDir = normalize(u_lightPos - fragPos);\n"
 		"    float diff = max(dot(norm, lightDir), 0.0f);\n"
 		"    vec3 diffuse = diff * u_lightColor;\n"
 
-		"    float specularStrength = 0.5f;\n"
-		"    vec3 viewDir = normalize(-oFragPos);\n"
+		"    float specularStrength = 1.0f;\n"
+		"    vec3 viewDir = normalize(u_viewPos - fragPos);\n"
 		"    vec3 reflectDir = reflect(-lightDir, norm);\n"
 		"    float spec = pow(max(dot(viewDir, reflectDir), 0.0f), 32);"
 		"    vec3 specular = specularStrength * spec * u_lightColor;\n"
 
-		"    vec3 result = (ambient + diffuse + specular) * u_objectColor;\n"
-		"    FragColor = vec4(result, 1.0f);\n"
+		"    oLightingColor = (ambient + diffuse + specular);\n"
+
+		"}\0";
+	const char* objectFragmentShaderSource = "#version 330 core\n"
+		"out vec4 FragColor;\n"
+		"in vec3 oLightingColor;\n"
+
+		"uniform vec3 u_objectColor;\n"
+		"void main(){\n"
+		"    FragColor = vec4(oLightingColor * u_objectColor, 1.0f);\n"
 		"}\0";
 
 	const char* lampVertexShaderSource = "#version 330 core\n"

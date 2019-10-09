@@ -55,7 +55,9 @@ int tutorial(){
 }
 
 int exercise(){
-	// phong lighting model in view space
+	// Gouraud shading 
+	return exercise17();
+	// Phong lighting model in view space
 	return exercise16();
 	// lighting 
 	return exercise15();

@@ -15,3 +15,4 @@
 #include "14_camera_exercise2.h"
 #include "15_basic_lighting_exercise1.h"
 #include "16_basic_lighting_exercise2.h"
+#include "17_basic_lighting_exercise3.h"
