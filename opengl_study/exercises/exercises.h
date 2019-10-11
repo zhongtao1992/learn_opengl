@@ -16,3 +16,6 @@
 #include "15_basic_lighting_exercise1.h"
 #include "16_basic_lighting_exercise2.h"
 #include "17_basic_lighting_exercise3.h"
+#include "18_lighting_maps_exercise2.h"
+#include "19_lighting_maps_exercise3.h"
+#include "20_lighting_maps_exercise4.h"

@@ -170,5 +170,20 @@
     <ClInclude Include="tutorials\18_materials.h">
       <Filter>源文件\tutorials</Filter>
     </ClInclude>
+    <ClInclude Include="tutorials\19_lighting_maps_diffuse.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\20_lighting_maps_specular.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\18_lighting_maps_exercise2.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\19_lighting_maps_exercise3.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\20_lighting_maps_exercise4.h">
+      <Filter>源文件\exercises</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

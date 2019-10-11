@@ -17,3 +17,5 @@
 #include "16_basic_lighting_diffuse.h"
 #include "17_basic_lighting_specular.h"
 #include "18_materials.h"
+#include "19_lighting_maps_diffuse.h"
+#include "20_lighting_maps_specular.h"

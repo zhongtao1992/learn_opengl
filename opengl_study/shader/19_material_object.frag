@@ -1,8 +1,7 @@
 #version 330 core
 
 struct Material {
-	vec3 ambient;
-	vec3 diffuse;
+	sampler2D diffuse;
 	vec3 specular;
 	float shininess;	
 };
@@ -17,6 +16,7 @@ struct Light {
 out vec4 FragColor;
 in vec3 oNormal;
 in vec3 oFragPos;
+in vec2 oTexCoords;
 
 uniform vec3 u_lightPos;
 uniform vec3 u_viewPos;
@@ -24,12 +24,12 @@ uniform Material u_material;
 uniform Light u_light;
 
 void main(){
-    vec3 ambient = u_light.ambient * u_material.ambient;
+    vec3 ambient = u_light.ambient * vec3(texture(u_material.diffuse, oTexCoords));
 
     vec3 norm = normalize(oNormal);
     vec3 lightDir = normalize(u_lightPos - oFragPos);
     float diff = max(dot(norm, lightDir), 0.0f);
-    vec3 diffuse = u_light.diffuse * (diff * u_material.diffuse);
+    vec3 diffuse = u_light.diffuse * (diff * vec3(texture(u_material.diffuse, oTexCoords)));
 
     vec3 viewDir = normalize(u_viewPos - oFragPos);
     vec3 reflectDir = reflect(-lightDir, norm);

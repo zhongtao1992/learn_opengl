@@ -2,6 +2,12 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// lighting maps specular
+	return tutorial20();
+
+	// lighting maps diffuse 
+	return tutorial19();
+
 	// material
 	return tutorial18();
 
@@ -58,6 +64,12 @@ int tutorial(){
 }
 
 int exercise(){
+	// lighting maps emission
+	return exercise20();
+	// lighting maps
+	return exercise19();
+	// lighting maps 
+	return exercise18();
 	// Gouraud shading 
 	return exercise17();
 	// Phong lighting model in view space
@@ -96,7 +108,7 @@ int exercise(){
 
 int main(){
 	
-	return tutorial();
+	//return tutorial();
 
 	return exercise();
 
