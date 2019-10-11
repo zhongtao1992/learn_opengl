@@ -2,6 +2,9 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// material
+	return tutorial18();
+
 	// lighting: phong lighting model
 	return tutorial17();
 
@@ -93,7 +96,7 @@ int exercise(){
 
 int main(){
 	
-	//return tutorial();
+	return tutorial();
 
 	return exercise();
 

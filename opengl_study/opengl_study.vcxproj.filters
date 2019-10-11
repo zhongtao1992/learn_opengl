@@ -167,5 +167,8 @@
     <ClInclude Include="exercises\17_basic_lighting_exercise3.h">
       <Filter>源文件\exercises</Filter>
     </ClInclude>
+    <ClInclude Include="tutorials\18_materials.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

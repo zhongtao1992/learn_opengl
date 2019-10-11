@@ -161,6 +161,7 @@
     <ClInclude Include="tutorials\15_colors.h" />
     <ClInclude Include="tutorials\16_basic_lighting_diffuse.h" />
     <ClInclude Include="tutorials\17_basic_lighting_specular.h" />
+    <ClInclude Include="tutorials\18_materials.h" />
     <ClInclude Include="tutorials\1_hello_window.h" />
     <ClInclude Include="tutorials\2_hello_triangle.h" />
     <ClInclude Include="tutorials\3_hello_rectangle.h" />

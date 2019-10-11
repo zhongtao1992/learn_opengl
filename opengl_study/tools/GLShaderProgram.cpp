@@ -19,7 +19,7 @@ std::string getStringFromFile(const char* filePath){
 	if (readSize < statBuf.st_size){
 		buffer[readSize] = '\0';
 	}
-	std::string ret((const char*)buffer);
+	std::string ret((const char*)buffer, readSize);
 	free(buffer);
 
 	return ret;
