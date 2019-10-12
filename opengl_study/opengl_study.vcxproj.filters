@@ -185,5 +185,17 @@
     <ClInclude Include="exercises\20_lighting_maps_exercise4.h">
       <Filter>源文件\exercises</Filter>
     </ClInclude>
+    <ClInclude Include="tutorials\21_light_casters_directional.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\22_light_casters_point.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\23_light_casters_spot.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\24_light_casters_spot_soft.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

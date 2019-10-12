@@ -2,6 +2,18 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// light casters spot smooth
+	return tutorial24();
+
+	// light casters spot
+	return tutorial23();
+
+	// light casters point
+	return tutorial22();
+
+	// light casters directional
+	return tutorial21();
+
 	// lighting maps specular
 	return tutorial20();
 
@@ -108,7 +120,7 @@ int exercise(){
 
 int main(){
 	
-	//return tutorial();
+	return tutorial();
 
 	return exercise();
 

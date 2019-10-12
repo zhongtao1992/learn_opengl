@@ -30,6 +30,8 @@ public:
 	float getZoom() { return m_fov; };
 
 	glm::vec3 getPosition() { return m_cameraPos; }
+
+	glm::vec3 getFront() { return m_cameraFront; }
 private:
 	void updateVector();
 

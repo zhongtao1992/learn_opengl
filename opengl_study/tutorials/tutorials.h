@@ -19,3 +19,7 @@
 #include "18_materials.h"
 #include "19_lighting_maps_diffuse.h"
 #include "20_lighting_maps_specular.h"
+#include "21_light_casters_directional.h"
+#include "22_light_casters_point.h"
+#include "23_light_casters_spot.h"
+#include "24_light_casters_spot_soft.h"
