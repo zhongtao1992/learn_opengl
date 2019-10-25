@@ -25,6 +25,9 @@
     <Filter Include="源文件\tutorials">
       <UniqueIdentifier>{a1c19949-839d-411a-8209-7bbd38580bbf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\render">
+      <UniqueIdentifier>{69d8b95c-1e55-4630-b1bf-4b83b1f196f5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -41,6 +44,12 @@
     </ClCompile>
     <ClCompile Include="tools\Camera.cpp">
       <Filter>源文件\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Mesh.cpp">
+      <Filter>源文件\render</Filter>
+    </ClCompile>
+    <ClCompile Include="render\Model.cpp">
+      <Filter>源文件\render</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -195,6 +204,18 @@
       <Filter>源文件\tutorials</Filter>
     </ClInclude>
     <ClInclude Include="tutorials\24_light_casters_spot_soft.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\25_multiple_lights.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Model.h">
+      <Filter>源文件\render</Filter>
+    </ClInclude>
+    <ClInclude Include="render\Mesh.h">
+      <Filter>源文件\render</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\26_model_loading.h">
       <Filter>源文件\tutorials</Filter>
     </ClInclude>
   </ItemGroup>

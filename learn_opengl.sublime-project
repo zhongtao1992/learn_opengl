@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"path": "opengl_study\\exercises"
+		},
+		{
+			"path": "opengl_study\\external"
+		},
+		{
+			"path": "opengl_study\\shader"
+		},
+		{
+			"path": "opengl_study\\tools"
+		},
+		{
+			"path": "opengl_study\\tutorials"
+		}
+	]
+}

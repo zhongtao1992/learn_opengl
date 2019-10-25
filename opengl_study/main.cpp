@@ -2,6 +2,12 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// model loading
+	return tutorial26();
+
+	// multiple light
+	return tutorial25();
+
 	// light casters spot smooth
 	return tutorial24();
 

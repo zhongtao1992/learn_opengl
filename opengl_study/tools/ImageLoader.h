@@ -11,6 +11,8 @@ public:
 
 	bool loadImg(const char* path, GLint mode);
 
+	bool loadImg(const char* path);
+
 	bool defaultLoadJPG(const char* path, bool flipOnload = true);
 
 	bool defaultLoadPNG(const char* path, bool flipOnload = true);

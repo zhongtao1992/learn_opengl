@@ -35,6 +35,33 @@ bool ImageLoader::loadImg(const char* path, GLint mode){
 	return bRes;
 }
 
+bool ImageLoader::loadImg(const char* path){
+	bool bRes = false;
+	int width, heigth, nrChannels;
+	unsigned char* data = stbi_load(path, &width, &heigth, &nrChannels, 0);
+	if (data) {
+		bRes = true;
+		GLenum mode;
+		if (nrChannels == 1){
+			mode = GL_RED;
+		}
+		else if(nrChannels == 3){
+			mode = GL_RGB;
+		}
+		else if (nrChannels == 4){
+			mode = GL_RGBA;
+		}
+		glTexImage2D(GL_TEXTURE_2D, 0, mode, width, heigth, 0, mode, GL_UNSIGNED_BYTE, data);
+		glGenerateMipmap(GL_TEXTURE_2D);
+	}
+	else {
+		std::cout << "Faild to load Texture" << std::endl;
+	}
+	stbi_image_free(data);
+	
+	return bRes;
+}
+
 bool ImageLoader::defaultLoadJPG(const char* path, bool flipOnload /*= true*/){
 	setParameter(GL_TEXTURE_WRAP_S, GL_REPEAT);
 	setParameter(GL_TEXTURE_WRAP_T, GL_REPEAT);

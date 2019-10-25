@@ -23,3 +23,5 @@
 #include "22_light_casters_point.h"
 #include "23_light_casters_spot.h"
 #include "24_light_casters_spot_soft.h"
+#include "25_multiple_lights.h"
+#include "26_model_loading.h"
