@@ -25,3 +25,7 @@
 #include "24_light_casters_spot_soft.h"
 #include "25_multiple_lights.h"
 #include "26_model_loading.h"
+#include "27_depth_testing.h"
+#include "28_stencil_testing.h"
+#include "29_blending_discard.h"
+#include "30_blending_sorted.h"

@@ -2,6 +2,18 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// blending sorted
+	return tutorial30();
+
+	// blending discard
+	return tutorial29();
+
+	// stencil testing
+	return tutorial28();
+
+	// depth testing
+	return tutorial27();
+
 	// model loading
 	return tutorial26();
 

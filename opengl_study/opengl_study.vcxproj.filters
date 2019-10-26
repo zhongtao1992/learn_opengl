@@ -218,5 +218,17 @@
     <ClInclude Include="tutorials\26_model_loading.h">
       <Filter>源文件\tutorials</Filter>
     </ClInclude>
+    <ClInclude Include="tutorials\27_depth_testing.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\28_stencil_testing.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\29_blending_discard.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\30_blending_sorted.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
