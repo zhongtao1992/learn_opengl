@@ -230,5 +230,11 @@
     <ClInclude Include="tutorials\30_blending_sorted.h">
       <Filter>源文件\tutorials</Filter>
     </ClInclude>
+    <ClInclude Include="tutorials\31_face_culling.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\32_framebufers.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

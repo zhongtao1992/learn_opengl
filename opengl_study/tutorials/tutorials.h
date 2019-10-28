@@ -29,3 +29,5 @@
 #include "28_stencil_testing.h"
 #include "29_blending_discard.h"
 #include "30_blending_sorted.h"
+#include "31_face_culling.h"
+#include "32_framebufers.h"

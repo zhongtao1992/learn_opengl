@@ -2,6 +2,12 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// framebuffer
+	return tutorial32();
+
+	// face culling
+	return tutorial31();
+
 	// blending sorted
 	return tutorial30();
 
