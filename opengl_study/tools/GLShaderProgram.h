@@ -1,5 +1,6 @@
 #pragma once
 #include <glad\glad.h>
+#include <glm\glm.hpp>
 
 class GLShaderProgram{
 public:
@@ -18,6 +19,7 @@ public: // utility uniform functions
 	int setFloat(const char* name, const float& fValue);
 	int setMatrix4fv(const char* name, const GLfloat* pValue);
 	int setVec3(const char* name, const float& x, const float& y, const float& z);
+	int setVec3(const char* name, const glm::vec3& vec3Value);
 private:
 	unsigned int m_programID;
 	bool m_bValid;

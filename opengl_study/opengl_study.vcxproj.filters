@@ -51,6 +51,9 @@
     <ClCompile Include="render\Model.cpp">
       <Filter>源文件\render</Filter>
     </ClCompile>
+    <ClCompile Include="tools\CubemapLoader.cpp">
+      <Filter>源文件\tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
@@ -235,6 +238,18 @@
     </ClInclude>
     <ClInclude Include="tutorials\32_framebufers.h">
       <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\CubemapLoader.h">
+      <Filter>源文件\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\33_cubemaps_skybox.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\34_cubemaps_environment_mapping.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="exercises\21_cubemap_environment_mapping_exercise1.h">
+      <Filter>源文件\exercises</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

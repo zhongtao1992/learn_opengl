@@ -125,3 +125,11 @@ int GLShaderProgram::setVec3(const char* name, const float& x, const float& y, c
 	}
 	return location;
 }
+
+int GLShaderProgram::setVec3(const char* name, const glm::vec3& vec3Value){
+	int location = getLocation(name);
+	if (location != -1) {
+		glUniform3fv(location, 1, &vec3Value[0]);
+	}
+	return location;
+}

@@ -128,6 +128,7 @@
     <ClCompile Include="render\Mesh.cpp" />
     <ClCompile Include="render\Model.cpp" />
     <ClCompile Include="tools\Camera.cpp" />
+    <ClCompile Include="tools\CubemapLoader.cpp" />
     <ClCompile Include="tools\GLShaderProgram.cpp" />
     <ClCompile Include="tools\ImageLoader.cpp" />
   </ItemGroup>
@@ -145,6 +146,7 @@
     <ClInclude Include="exercises\19_lighting_maps_exercise3.h" />
     <ClInclude Include="exercises\1_hello_triangle_exercise1.h" />
     <ClInclude Include="exercises\20_lighting_maps_exercise4.h" />
+    <ClInclude Include="exercises\21_cubemap_environment_mapping_exercise1.h" />
     <ClInclude Include="exercises\2_hello_triangle_exercise2.h" />
     <ClInclude Include="exercises\3_shader_exercise1.h" />
     <ClInclude Include="exercises\4_shader_exercise2.h" />
@@ -158,6 +160,7 @@
     <ClInclude Include="render\Mesh.h" />
     <ClInclude Include="render\Model.h" />
     <ClInclude Include="tools\Camera.h" />
+    <ClInclude Include="tools\CubemapLoader.h" />
     <ClInclude Include="tools\GLShaderProgram.h" />
     <ClInclude Include="tools\ImageLoader.h" />
     <ClInclude Include="tutorials\10_coordinate_system_depth.h" />
@@ -185,6 +188,8 @@
     <ClInclude Include="tutorials\30_blending_sorted.h" />
     <ClInclude Include="tutorials\31_face_culling.h" />
     <ClInclude Include="tutorials\32_framebufers.h" />
+    <ClInclude Include="tutorials\33_cubemaps_skybox.h" />
+    <ClInclude Include="tutorials\34_cubemaps_environment_mapping.h" />
     <ClInclude Include="tutorials\3_hello_rectangle.h" />
     <ClInclude Include="tutorials\4_shader_uniform.h" />
     <ClInclude Include="tutorials\5_shader_interpolation.h" />

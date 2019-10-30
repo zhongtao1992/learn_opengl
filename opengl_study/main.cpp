@@ -2,6 +2,12 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// cubemap environment mapping
+	return tutorial34();
+
+	// cubemap
+	return tutorial33();
+
 	// framebuffer
 	return tutorial32();
 
@@ -100,6 +106,8 @@ int tutorial(){
 }
 
 int exercise(){
+	// cubemap environment mapping
+	return exercise21();
 	// lighting maps emission
 	return exercise20();
 	// lighting maps
@@ -144,7 +152,7 @@ int exercise(){
 
 int main(){
 	
-	return tutorial();
+	//return tutorial();
 
 	return exercise();
 

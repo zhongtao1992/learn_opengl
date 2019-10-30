@@ -31,3 +31,5 @@
 #include "30_blending_sorted.h"
 #include "31_face_culling.h"
 #include "32_framebufers.h"
+#include "33_cubemaps_skybox.h"
+#include "34_cubemaps_environment_mapping.h"
