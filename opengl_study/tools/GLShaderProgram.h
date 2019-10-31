@@ -14,6 +14,8 @@ public:
 	void use();
 	// get uniform location/index
 	int getLocation(const char* name);
+	// id
+	unsigned int getID() { return m_programID; }
 public: // utility uniform functions
 	int setInt(const char* name, const int& nValue);
 	int setFloat(const char* name, const float& fValue);

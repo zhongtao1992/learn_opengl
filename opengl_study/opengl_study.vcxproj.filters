@@ -251,5 +251,8 @@
     <ClInclude Include="exercises\21_cubemap_environment_mapping_exercise1.h">
       <Filter>源文件\exercises</Filter>
     </ClInclude>
+    <ClInclude Include="tutorials\35_advanced_glsl_ubo.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

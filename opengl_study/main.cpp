@@ -2,6 +2,9 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// uniform buffer object
+	return tutorial35();
+
 	// cubemap environment mapping
 	return tutorial34();
 
@@ -152,7 +155,7 @@ int exercise(){
 
 int main(){
 	
-	//return tutorial();
+	return tutorial();
 
 	return exercise();
 
