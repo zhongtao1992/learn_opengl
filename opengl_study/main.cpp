@@ -2,6 +2,15 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// normal visualization
+	return tutorial38();
+
+	// exploding effect
+	return tutorial37();
+
+	// use geometry shader build a house
+	return tutorial36();
+
 	// uniform buffer object
 	return tutorial35();
 

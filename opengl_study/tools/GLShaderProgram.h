@@ -6,9 +6,9 @@ class GLShaderProgram{
 public:
 	GLShaderProgram();
 	// init with disk file
-	bool initWithDiskFile(const char* vertexPath, const char* fragmentPath);
+	bool initWithDiskFile(const char* vertexPath, const char* fragmentPath, const char* geometryPath = nullptr);
 	// init with source
-	bool initWithSource(const char* vertexSource, const char* fragmentSource);
+	bool initWithSource(const char* vertexSource, const char* fragmentSource, const char* geometrySource = nullptr);
 
 	// use shader program
 	void use();

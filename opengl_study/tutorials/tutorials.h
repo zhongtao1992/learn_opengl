@@ -34,3 +34,6 @@
 #include "33_cubemaps_skybox.h"
 #include "34_cubemaps_environment_mapping.h"
 #include "35_advanced_glsl_ubo.h"
+#include "36_geometry_shader_houses.h"
+#include "37_geometry_shader_exploding.h"
+#include "38_normal_visualization.h"

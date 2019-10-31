@@ -254,5 +254,14 @@
     <ClInclude Include="tutorials\35_advanced_glsl_ubo.h">
       <Filter>源文件\tutorials</Filter>
     </ClInclude>
+    <ClInclude Include="tutorials\36_geometry_shader_houses.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\37_geometry_shader_exploding.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\38_normal_visualization.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
