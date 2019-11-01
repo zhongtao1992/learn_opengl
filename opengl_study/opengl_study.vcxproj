@@ -194,7 +194,10 @@
     <ClInclude Include="tutorials\36_geometry_shader_houses.h" />
     <ClInclude Include="tutorials\37_geometry_shader_exploding.h" />
     <ClInclude Include="tutorials\38_normal_visualization.h" />
+    <ClInclude Include="tutorials\39_instancing_quads.h" />
     <ClInclude Include="tutorials\3_hello_rectangle.h" />
+    <ClInclude Include="tutorials\40_asteroids.h" />
+    <ClInclude Include="tutorials\41_asteroids_instanced.h" />
     <ClInclude Include="tutorials\4_shader_uniform.h" />
     <ClInclude Include="tutorials\5_shader_interpolation.h" />
     <ClInclude Include="tutorials\6_texture.h" />

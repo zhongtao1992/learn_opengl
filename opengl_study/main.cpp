@@ -2,6 +2,15 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// asteroids instanced
+	return tutorial41();
+
+	// asteroids
+	return tutorial40();
+
+	// instancing quads
+	return tutorial39();
+
 	// normal visualization
 	return tutorial38();
 

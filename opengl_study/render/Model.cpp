@@ -14,6 +14,12 @@ void Model::Draw(GLShaderProgram shader){
 	}
 }
 
+void Model::DrawInstance(GLShaderProgram shader, const int& amount){
+	for (auto v : meshes){
+		v.DrawInstance(shader, amount);
+	}
+}
+
 void Model::Release(){
 	for (auto v : meshes){
 		v.Release();

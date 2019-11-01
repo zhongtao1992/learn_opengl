@@ -27,13 +27,13 @@ public:
 	// function
 	Mesh(std::vector<Vertex> vertices, std::vector<unsigned int> indices, std::vector<Texture> textures);
 	void Draw(GLShaderProgram shader);
+	void DrawInstance(GLShaderProgram shader, const int& amount);
 	void Release();
 	// mesh data
 	std::vector<Vertex> vertices;
 	std::vector<unsigned int> indices;
 	std::vector<Texture> textures;
 
-private:
 	// render data
 	unsigned int VAO, VBO, EBO;
 	// function

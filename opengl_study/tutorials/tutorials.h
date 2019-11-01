@@ -37,3 +37,6 @@
 #include "36_geometry_shader_houses.h"
 #include "37_geometry_shader_exploding.h"
 #include "38_normal_visualization.h"
+#include "39_instancing_quads.h"
+#include "40_asteroids.h"
+#include "41_asteroids_instanced.h"
