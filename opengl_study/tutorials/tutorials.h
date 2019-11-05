@@ -40,3 +40,5 @@
 #include "39_instancing_quads.h"
 #include "40_asteroids.h"
 #include "41_asteroids_instanced.h"
+#include "42_anti_aliasing_multisampling.h"
+#include "43_anti_aliasing_offscreen.h"

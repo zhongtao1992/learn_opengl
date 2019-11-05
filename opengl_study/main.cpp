@@ -2,6 +2,12 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// anti aliasing with multisample, post-processing
+	return tutorial43();
+
+	// anti aliasing with multisample
+	return tutorial42();
+
 	// asteroids instanced
 	return tutorial41();
 

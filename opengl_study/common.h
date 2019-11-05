@@ -54,6 +54,39 @@ static inline int commonInit(GLFWwindow** outWin){
 	return 1;
 }
 
+static inline int commonInitWithMultiSample(GLFWwindow** outWin, const int& sampleCount){
+	glfwInit();
+	// config glfw
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+	// enable multisample
+	glfwWindowHint(GLFW_SAMPLES, sampleCount);
+
+	// create window
+	GLFWwindow *window = glfwCreateWindow(g_viewWidth, g_viewHeight, "LearnOpenGL", nullptr, nullptr);
+	*outWin = window;
+	if (nullptr == window) {
+		std::cout << "Faild to create GLFW window" << std::endl;
+		glfwTerminate();
+		return -1;
+	}
+	glfwMakeContextCurrent(window);
+	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
+	// initialize glad
+	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+		std::cout << "Faild to initialize GLAD" << std::endl;
+		return -1;
+	}
+
+	// max vertex attribute 
+	int maxAttributes;
+	glGetIntegerv(GL_MAX_VERTEX_ATTRIBS, &maxAttributes);
+	std::cout << "Maxium num of vertex attributes supported:" << maxAttributes << std::endl;
+	return 1;
+}
+
 static inline unsigned int createShaderProgram(const char* vSource, const char* fSource){
 	// build and compile shader
 	// --------------------------------

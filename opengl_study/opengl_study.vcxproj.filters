@@ -272,5 +272,11 @@
     <ClInclude Include="tutorials\41_asteroids_instanced.h">
       <Filter>源文件\tutorials</Filter>
     </ClInclude>
+    <ClInclude Include="tutorials\42_anti_aliasing_multisampling.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\43_anti_aliasing_offscreen.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
