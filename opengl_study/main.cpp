@@ -2,6 +2,48 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// ssao
+	return tutorial57();
+
+	// deferred shading lighting volumes
+	return tutorial56();
+	
+	// deferred shading
+	return tutorial55();
+
+	// bloom
+	return tutorial54();
+
+	// hdr
+	return tutorial53();
+
+	// parallax occlusion mapping
+	return tutorial52();
+
+	// steep parallax mapping
+	return tutorial51();
+
+	// parallax mapping
+	return tutorial50();
+
+	// normal mapping
+	return tutorial49();
+
+	// point shadow
+	return tutorial48();
+
+	// shadow mapping
+	return tutorial47();
+
+	// shadow mapping
+	return tutorial46();
+	
+	// gamma correction
+	return tutorial45();
+
+	// advanced lighting
+	return tutorial44();
+
 	// anti aliasing with multisample, post-processing
 	return tutorial43();
 

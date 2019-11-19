@@ -13,6 +13,7 @@
 #include "12_camera_circle.h"
 #include "13_camera_keyboard_dt.h"
 #include "14_camera_mouse_zoom.h"
+// lighting
 #include "15_colors.h"
 #include "16_basic_lighting_diffuse.h"
 #include "17_basic_lighting_specular.h"
@@ -24,7 +25,9 @@
 #include "23_light_casters_spot.h"
 #include "24_light_casters_spot_soft.h"
 #include "25_multiple_lights.h"
+// model loading
 #include "26_model_loading.h"
+// advanced opengl
 #include "27_depth_testing.h"
 #include "28_stencil_testing.h"
 #include "29_blending_discard.h"
@@ -42,3 +45,18 @@
 #include "41_asteroids_instanced.h"
 #include "42_anti_aliasing_multisampling.h"
 #include "43_anti_aliasing_offscreen.h"
+// advanced lighting
+#include "44_advanced_lighting.h"
+#include "45_gamma_correction.h"
+#include "46_shadow_mapping_depth.h"
+#include "47_shadow_mapping_base.h"
+#include "48_point_shadow.h"
+#include "49_normal_mapping.h"
+#include "50_parallax_mapping.h"
+#include "51_steep_parallax_mapping.h"
+#include "52_parallax_occlusion_mapping.h"
+#include "53_hdr.h"
+#include "54_bloom.h"
+#include "55_deferred_shading.h"
+#include "56_deferred_shading_volumes.h"
+#include "57_ssao.h"

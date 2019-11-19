@@ -125,6 +125,9 @@
   <ItemGroup>
     <ClCompile Include="external\glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mesh\CubeMesh.cpp" />
+    <ClCompile Include="mesh\MeshCustom.cpp" />
+    <ClCompile Include="mesh\QuadMesh.cpp" />
     <ClCompile Include="render\Mesh.cpp" />
     <ClCompile Include="render\Model.cpp" />
     <ClCompile Include="tools\Camera.cpp" />
@@ -157,6 +160,9 @@
     <ClInclude Include="exercises\9_texture_exercise4.h" />
     <ClInclude Include="exercises\exercises.h" />
     <ClInclude Include="external\stb_image.h" />
+    <ClInclude Include="mesh\CubeMesh.h" />
+    <ClInclude Include="mesh\MeshCustom.h" />
+    <ClInclude Include="mesh\QuadMesh.h" />
     <ClInclude Include="render\Mesh.h" />
     <ClInclude Include="render\Model.h" />
     <ClInclude Include="tools\Camera.h" />
@@ -200,7 +206,21 @@
     <ClInclude Include="tutorials\41_asteroids_instanced.h" />
     <ClInclude Include="tutorials\42_anti_aliasing_multisampling.h" />
     <ClInclude Include="tutorials\43_anti_aliasing_offscreen.h" />
+    <ClInclude Include="tutorials\44_advanced_lighting.h" />
+    <ClInclude Include="tutorials\45_gamma_correction.h" />
+    <ClInclude Include="tutorials\46_shadow_mapping_depth.h" />
+    <ClInclude Include="tutorials\47_shadow_mapping_base.h" />
+    <ClInclude Include="tutorials\48_point_shadow.h" />
+    <ClInclude Include="tutorials\49_normal_mapping.h" />
     <ClInclude Include="tutorials\4_shader_uniform.h" />
+    <ClInclude Include="tutorials\50_parallax_mapping.h" />
+    <ClInclude Include="tutorials\51_steep_parallax_mapping.h" />
+    <ClInclude Include="tutorials\52_parallax_occlusion_mapping.h" />
+    <ClInclude Include="tutorials\53_hdr.h" />
+    <ClInclude Include="tutorials\54_bloom.h" />
+    <ClInclude Include="tutorials\55_deferred_shading.h" />
+    <ClInclude Include="tutorials\56_deferred_shading_volumes.h" />
+    <ClInclude Include="tutorials\57_ssao.h" />
     <ClInclude Include="tutorials\5_shader_interpolation.h" />
     <ClInclude Include="tutorials\6_texture.h" />
     <ClInclude Include="tutorials\7_texture_combined.h" />

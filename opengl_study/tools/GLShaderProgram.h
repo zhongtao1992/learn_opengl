@@ -20,6 +20,7 @@ public: // utility uniform functions
 	int setInt(const char* name, const int& nValue);
 	int setFloat(const char* name, const float& fValue);
 	int setMatrix4fv(const char* name, const GLfloat* pValue);
+	int setMatrix4fv(const char* name, const glm::mat4& mat4Value);
 	int setVec3(const char* name, const float& x, const float& y, const float& z);
 	int setVec3(const char* name, const glm::vec3& vec3Value);
 private:

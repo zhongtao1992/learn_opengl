@@ -1,6 +1,7 @@
 #include "GLShaderProgram.h"
 
 #include <iostream>
+#include <glm\gtc\type_ptr.hpp>
 
 std::string getStringFromFile(const char* filePath){
 	FILE* fp = fopen(filePath, "rb");
@@ -139,6 +140,14 @@ int GLShaderProgram::setMatrix4fv(const char* name, const GLfloat* pValue){
 	int location = getLocation(name);
 	if (location != -1){
 		glUniformMatrix4fv(location, 1, GL_FALSE, pValue);
+	}
+	return location;
+}
+
+int GLShaderProgram::setMatrix4fv(const char* name, const glm::mat4& mat4Value){
+	int location = getLocation(name);
+	if (location != -1) {
+		glUniformMatrix4fv(location, 1, GL_FALSE, glm::value_ptr(mat4Value));
 	}
 	return location;
 }

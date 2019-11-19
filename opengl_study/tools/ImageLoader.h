@@ -11,11 +11,13 @@ public:
 
 	bool loadImg(const char* path, GLint mode);
 
-	bool loadImg(const char* path);
+	bool loadImg(const char* path, bool bGammaCorrect = false);
 
 	bool defaultLoadJPG(const char* path, bool flipOnload = true);
 
 	bool defaultLoadPNG(const char* path, bool flipOnload = true);
+
+	bool defaultLoadImg(const char* path, bool flipOnload = true);
 
 	unsigned int getID() {
 		return m_imgId;

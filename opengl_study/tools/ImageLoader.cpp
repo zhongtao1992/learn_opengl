@@ -35,23 +35,26 @@ bool ImageLoader::loadImg(const char* path, GLint mode){
 	return bRes;
 }
 
-bool ImageLoader::loadImg(const char* path){
+bool ImageLoader::loadImg(const char* path, bool bGammaCorrect /*= false*/){
 	bool bRes = false;
 	int width, heigth, nrChannels;
 	unsigned char* data = stbi_load(path, &width, &heigth, &nrChannels, 0);
 	if (data) {
 		bRes = true;
-		GLenum mode;
-		if (nrChannels == 1){
-			mode = GL_RED;
+		GLenum internalFormat;
+		GLenum dataFormat;
+		if (nrChannels == 1) {
+			internalFormat = dataFormat = GL_RED;
 		}
-		else if(nrChannels == 3){
-			mode = GL_RGB;
+		else if (nrChannels == 3) {
+			internalFormat = bGammaCorrect ? GL_SRGB : GL_RGB;
+			dataFormat = GL_RGB;
 		}
-		else if (nrChannels == 4){
-			mode = GL_RGBA;
+		else if (nrChannels == 4) {
+			internalFormat = bGammaCorrect ? GL_SRGB_ALPHA : GL_RGBA;
+			dataFormat = GL_RGBA;
 		}
-		glTexImage2D(GL_TEXTURE_2D, 0, mode, width, heigth, 0, mode, GL_UNSIGNED_BYTE, data);
+		glTexImage2D(GL_TEXTURE_2D, 0, internalFormat, width, heigth, 0, dataFormat, GL_UNSIGNED_BYTE, data);
 		glGenerateMipmap(GL_TEXTURE_2D);
 	}
 	else {
@@ -80,4 +83,14 @@ bool ImageLoader::defaultLoadPNG(const char* path, bool flipOnload /*= true*/) {
 
 	setFlipOnLoad(flipOnload);
 	return loadImg(path, GL_RGBA);
+}
+
+bool ImageLoader::defaultLoadImg(const char* path, bool flipOnload /*= true*/){
+	setParameter(GL_TEXTURE_WRAP_S, GL_REPEAT);
+	setParameter(GL_TEXTURE_WRAP_T, GL_REPEAT);
+	setParameter(GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	setParameter(GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+	setFlipOnLoad(flipOnload);
+	return loadImg(path);
 }

@@ -28,6 +28,9 @@
     <Filter Include="源文件\render">
       <UniqueIdentifier>{69d8b95c-1e55-4630-b1bf-4b83b1f196f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\mesh">
+      <UniqueIdentifier>{81fd1e13-8ffc-4326-bf9d-077e33521973}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -53,6 +56,15 @@
     </ClCompile>
     <ClCompile Include="tools\CubemapLoader.cpp">
       <Filter>源文件\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshCustom.cpp">
+      <Filter>源文件\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\CubeMesh.cpp">
+      <Filter>源文件\mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\QuadMesh.cpp">
+      <Filter>源文件\mesh</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -276,6 +288,57 @@
       <Filter>源文件\tutorials</Filter>
     </ClInclude>
     <ClInclude Include="tutorials\43_anti_aliasing_offscreen.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\44_advanced_lighting.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\45_gamma_correction.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\46_shadow_mapping_depth.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\47_shadow_mapping_base.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\48_point_shadow.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\49_normal_mapping.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\50_parallax_mapping.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\51_steep_parallax_mapping.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\52_parallax_occlusion_mapping.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\53_hdr.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\54_bloom.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\55_deferred_shading.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshCustom.h">
+      <Filter>源文件\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\CubeMesh.h">
+      <Filter>源文件\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\QuadMesh.h">
+      <Filter>源文件\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\56_deferred_shading_volumes.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\57_ssao.h">
       <Filter>源文件\tutorials</Filter>
     </ClInclude>
   </ItemGroup>
