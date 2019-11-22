@@ -9,7 +9,7 @@ CubeMesh::CubeMesh(void* vertexData, const unsigned int& vertexSize){
 
 CubeMesh::~CubeMesh(){
 	glDeleteVertexArrays(1, &m_uMeshVAO);
-	glDeleteBuffers(1, &m_uMeshVBO);	
+	glDeleteBuffers(1, &m_uMeshVBO);
 }
 
 void CubeMesh::draw(GLShaderProgram shader){

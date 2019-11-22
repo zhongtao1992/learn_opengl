@@ -19,6 +19,8 @@ public:
 
 	bool defaultLoadImg(const char* path, bool flipOnload = true);
 
+	bool loadHDR(const char* path);
+
 	unsigned int getID() {
 		return m_imgId;
 	};

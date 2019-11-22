@@ -66,6 +66,9 @@
     <ClCompile Include="mesh\QuadMesh.cpp">
       <Filter>源文件\mesh</Filter>
     </ClCompile>
+    <ClCompile Include="mesh\SphereMesh.cpp">
+      <Filter>源文件\mesh</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
@@ -339,6 +342,24 @@
       <Filter>源文件\tutorials</Filter>
     </ClInclude>
     <ClInclude Include="tutorials\57_ssao.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\SphereMesh.h">
+      <Filter>源文件\mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\58_lighting.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\59_lighting_textured.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\60_ibl_irradiance_conversion.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\61_ibl_irradiance.h">
+      <Filter>源文件\tutorials</Filter>
+    </ClInclude>
+    <ClInclude Include="tutorials\62_ibl_specular.h">
       <Filter>源文件\tutorials</Filter>
     </ClInclude>
   </ItemGroup>

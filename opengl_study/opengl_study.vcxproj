@@ -128,6 +128,7 @@
     <ClCompile Include="mesh\CubeMesh.cpp" />
     <ClCompile Include="mesh\MeshCustom.cpp" />
     <ClCompile Include="mesh\QuadMesh.cpp" />
+    <ClCompile Include="mesh\SphereMesh.cpp" />
     <ClCompile Include="render\Mesh.cpp" />
     <ClCompile Include="render\Model.cpp" />
     <ClCompile Include="tools\Camera.cpp" />
@@ -163,6 +164,7 @@
     <ClInclude Include="mesh\CubeMesh.h" />
     <ClInclude Include="mesh\MeshCustom.h" />
     <ClInclude Include="mesh\QuadMesh.h" />
+    <ClInclude Include="mesh\SphereMesh.h" />
     <ClInclude Include="render\Mesh.h" />
     <ClInclude Include="render\Model.h" />
     <ClInclude Include="tools\Camera.h" />
@@ -221,7 +223,12 @@
     <ClInclude Include="tutorials\55_deferred_shading.h" />
     <ClInclude Include="tutorials\56_deferred_shading_volumes.h" />
     <ClInclude Include="tutorials\57_ssao.h" />
+    <ClInclude Include="tutorials\58_lighting.h" />
+    <ClInclude Include="tutorials\59_lighting_textured.h" />
     <ClInclude Include="tutorials\5_shader_interpolation.h" />
+    <ClInclude Include="tutorials\60_ibl_irradiance_conversion.h" />
+    <ClInclude Include="tutorials\61_ibl_irradiance.h" />
+    <ClInclude Include="tutorials\62_ibl_specular.h" />
     <ClInclude Include="tutorials\6_texture.h" />
     <ClInclude Include="tutorials\7_texture_combined.h" />
     <ClInclude Include="tutorials\8_transformations.h" />

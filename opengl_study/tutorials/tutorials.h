@@ -60,3 +60,10 @@
 #include "55_deferred_shading.h"
 #include "56_deferred_shading_volumes.h"
 #include "57_ssao.h"
+// PBR
+#include "58_lighting.h"
+#include "59_lighting_textured.h"
+// IBR
+#include "60_ibl_irradiance_conversion.h"
+#include "61_ibl_irradiance.h"
+#include "62_ibl_specular.h"

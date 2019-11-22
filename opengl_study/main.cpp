@@ -2,6 +2,21 @@
 #include "tutorials\tutorials.h"
 
 int tutorial(){
+	// ibl specular
+	return tutorial62();
+
+	// ibl irradiance
+	return tutorial61();
+
+	// ibl
+	return tutorial60();
+	
+	// pbr lighting textured
+	return tutorial59();
+
+	// pbr lighting
+	return tutorial58();
+
 	// ssao
 	return tutorial57();
 

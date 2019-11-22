@@ -94,3 +94,24 @@ bool ImageLoader::defaultLoadImg(const char* path, bool flipOnload /*= true*/){
 	setFlipOnLoad(flipOnload);
 	return loadImg(path);
 }
+
+bool ImageLoader::loadHDR(const char* path){
+	bool bRes = false;
+	stbi_set_flip_vertically_on_load(true);
+	int width, height, nrComponents;
+	float* data = stbi_loadf(path, &width, &height, &nrComponents, 0);
+	if(data){
+		bRes = true;
+		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB16F, width, height, 0, GL_RGB, GL_FLOAT, data);
+
+		setParameter(GL_TEXTURE_WRAP_S, GL_REPEAT);
+		setParameter(GL_TEXTURE_WRAP_T, GL_REPEAT);
+		setParameter(GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		setParameter(GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	}
+	else{
+		std::cout << "Failed to load HDR image." << std::endl;
+	}
+	stbi_image_free(data);
+	return bRes;
+}
