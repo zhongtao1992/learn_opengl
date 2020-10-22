@@ -1,4 +1,4 @@
-#include "./1_hello_window.h"
+#include "../tutorials/1_hello_window.h"
 
 #ifdef _VSCODE
 int main(){

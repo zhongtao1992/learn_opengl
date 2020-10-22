@@ -1,4 +1,4 @@
-#include "./3_hello_rectangle.h"
+#include "../tutorials/3_hello_rectangle.h"
 
 #ifdef _VSCODE
 int main(){
