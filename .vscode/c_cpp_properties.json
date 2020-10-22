@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [ 
+                "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include/**",
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/external/glad/include/**",
+                "${workspaceFolder}/external/glm/**",
+                "${workspaceFolder}/external/glfw/include/**",
+                "${workspaceFolder}/external/assimp/include/**"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "${workspaceFolder}/external/glfw/prebuild",
+                    "${workspaceFolder}/external/assimp/prebuild"
+                ]
+            },
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "_VSCODE"
+            ],
+            "compilerPath": "D:/mingw64/bin/gcc.exe",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}

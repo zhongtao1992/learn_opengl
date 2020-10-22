@@ -1,0 +1,62 @@
+{
+    "version": "2.0.0",
+    "command": "g++",
+    "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/run/${fileBasenameNoExtension}.exe"
+    ],
+    "problemMatcher": {
+        "owner": "cpp",
+        "fileLocation": [
+            "relative",
+            "${workspaceRoot}"
+        ],
+        "pattern": {
+            "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+            "file": 1,
+            "line": 2,
+            "column": 3,
+            "severity": 4,
+            "message": 5
+        }
+    },
+    "group": {
+        "kind": "build",
+        "isDefault": true
+    },
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: g++.exe build active file",
+            "command": "D:\\mingw64\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${workspaceFolder}/run/${fileBasenameNoExtension}.exe",
+                "-I${workspaceFolder}/external/glad/include/",
+                "-I${workspaceFolder}/external/glm",
+                "-I${workspaceFolder}/external/glfw/include",
+                "-I${workspaceFolder}/external/assimp/include",
+                "-L${workspaceFolder}/external/glad/prebuild",
+                "-L${workspaceFolder}/external/glfw/prebuild",
+                "-L${workspaceFolder}/external/assimp/prebuild",
+                "-lglfw3dll",
+                "-lglad",
+                "-D_VSCODE"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

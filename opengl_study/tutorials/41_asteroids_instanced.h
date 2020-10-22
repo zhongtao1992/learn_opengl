@@ -118,6 +118,7 @@ static int tutorial41() {
 	auto vecSize = sizeof(glm::vec4);
 	unsigned int instanceVBO;
 	// instance array
+
 	glGenBuffers(1, &instanceVBO);
 	glBindBuffer(GL_ARRAY_BUFFER, instanceVBO);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(glm::mat4) * amount, &modelMatrices[0], GL_STATIC_DRAW);
